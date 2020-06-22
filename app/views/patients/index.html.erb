@@ -1,0 +1,11 @@
+<div class="container">
+    <% @patient.each do |p| %>
+      <a href="<%= patient_path(p.id) %>"> <div class="border border-dark m-3 p-3">
+         <h2><%= p.name %></h2>
+         <ul>
+           <li><%= p.dept %></li>
+           <li><%= p.age %></li>
+         </ul>
+      </div></a>
+  <% end %>
+</div>

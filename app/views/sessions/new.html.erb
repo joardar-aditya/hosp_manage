@@ -1,0 +1,37 @@
+<div class= "container">
+<div class="border border-dark rounded p-3 m-3">
+   <h1>Log in </h1>
+  <%  flash.each do |name, value| %>
+     <div class="alert alert-<%= name %>">
+       <%= value %>
+     </div>
+    <% end %>
+   <%= form_tag sessions_path do %>
+    <div>
+      <%= label_tag :email %>
+      <%= text_field_tag :email, params[:email] %>
+    </div>
+    <div>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+    </div>
+    <%= submit_tag "Log in" %>
+    <%= submit_tag "Log in as Admin", :name => 'admin_button' %>
+   <% end %>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  <div class="border border-dark m-4 p-3">
+    <h1 class="text-center">Welcome to Hosp Manage</h1>
+    <p class="m-3 text-center"> We are a hospital management website!</p>
+  </div>
+</div>
